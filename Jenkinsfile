@@ -4,12 +4,7 @@ pipeline {
     stages {
         stage("read file") {
             steps {
-                sh "touch sample.text"
-                echo "${WORKSPACE}"
-                script {
-                    data = readFile(file: "${WORKSPACE}/sample.txt")
-                }
-                   println(data)
+echo "${params.text}"
                 
                 }
             }
